@@ -1,0 +1,26 @@
+name: Send Email
+
+on:
+  push: # 푸시할 때마다 실행 (필요 시 변경 가능)
+  workflow_dispatch: # 수동 실행 옵션
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Send Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.psjpsi002@gmai.com }}
+          password: ${{ secrets.a0901tkddlf! }}
+          subject: "GitHub에서 보낸 메일"
+          to: "tkddlf1978@naver.com" # 받는 사람 이메일
+          from: "your-email@gmail.com" # 보내는 사람 이메일
+          body: "안녕하세요! GitHub에서 메일을 보냈습니다."
+
