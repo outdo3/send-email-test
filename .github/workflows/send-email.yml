@@ -17,7 +17,7 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 465
           secure: true
-          username: ${{ secrets.psjpsi002@gmai.com }}
+          username: ${{ secrets.psjpsi002@gmail.com }}
           password: ${{ secrets.a0901tkddlf! }}
           subject: "GitHub에서 보낸 메일"
           to: "tkddlf1978@naver.com" # 받는 사람 이메일
